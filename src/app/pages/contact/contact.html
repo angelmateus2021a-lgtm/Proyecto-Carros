@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia de Autos de Lujo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            color: #fff;
+            line-height: 1.7;
+            background: url('https://images.unsplash.com/photo-1502877338535-766e1452684a') no-repeat center center fixed;
+            background-size: cover;
+            transition: background-image 2s ease-in-out;
+        }
+
+        section {
+            background: rgba(0, 0, 0, 0.55);
+
+            backdrop-filter: blur(6px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeUp 1s ease forwards;
+            color: #fff;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.15);
+        }
+
+        section p {
+            max-width: 900px;
+            margin: 0 auto 15px auto;
+            font-size: 1.05rem;
+        }
+
+
+        h2 {
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+        }
+
+        .text-primary {
+            color: #0d6efd !important;
+        }
+
+        .text-secondary {
+            color: #cfcfcf !important;
+        }
+
+        .text-danger {
+            color: #ff4d4d !important;
+        }
+
+        .carousel {
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .carousel-inner img {
+            border-radius: 12px;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-inner img:hover {
+            transform: scale(1.03);
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ====== Sección Maserati ====== -->
+    <section id="maserati" class="text-center p-5 my-5 rounded shadow">
+        <h2 class="fw-bold mb-4 text-primary">🏁 Historia de Maserati</h2>
+        <div class="container">
+            <p><strong>Maserati</strong> fue fundada el <strong>1 de diciembre de 1914</strong> en <strong>Bolonia,
+                    Italia</strong>, por los hermanos Alfieri, Ettore, Ernesto y Bindo Maserati. Desde el principio, su
+                objetivo fue crear autos de alto rendimiento para la competencia.</p>
+
+            <p>El famoso logotipo del <strong>tridente</strong> fue diseñado por Mario Maserati, inspirado en la estatua
+                de Neptuno ubicada en la plaza principal de Bolonia. Representa fuerza, energía y dominio.</p>
+
+            <p>En <strong>1926</strong>, Maserati fabricó su primer automóvil, el <strong>Tipo 26</strong>, que ganó su
+                categoría en la Targa Florio. Durante las décadas de 1930 y 1940, Maserati se convirtió en una potencia
+                del automovilismo con el <strong>Maserati 250F</strong>, que llevó a <strong>Juan Manuel Fangio</strong>
+                al título en 1957.</p>
+
+            <p>Hoy, Maserati sigue siendo sinónimo de lujo con modelos como el <strong>Ghibli</strong>,
+                <strong>Levante</strong> y el <strong>MC20</strong>, apostando también por la electrificación con su
+                línea <strong>Folgore</strong>.
+            </p>
+
+            <div id="carruselMaserati" class="carousel slide my-4" data-bs-ride="carousel">
+                <div class="carousel-inner rounded shadow-sm">
+                    <div class="carousel-item active"><img src="imagenes/maserati.jpg" class="d-block w-100 rounded"
+                            alt="Maserati 1"></div>
+                    <div class="carousel-item"><img src="imagenes/maserati2.jpg" class="d-block w-100 rounded"
+                            alt="Maserati 2"></div>
+                    <div class="carousel-item"><img src="imagenes/maserati4.webp" class="d-block w-100 rounded"
+                            alt="Maserati 3"></div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carruselMaserati"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carruselMaserati"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== Sección Rolls-Royce ====== -->
+    <section id="rolls" class="text-center p-5 my-5 rounded shadow">
+        <h2 class="fw-bold mb-4 text-secondary">🚘 Historia de Rolls-Royce</h2>
+        <div class="container">
+            <p><strong>Rolls-Royce</strong> fue fundada en <strong>1904</strong> en <strong>Manchester,
+                    Inglaterra</strong> por <strong>Charles Rolls</strong> y <strong>Henry Royce</strong>, con la visión
+                de crear “el mejor automóvil del mundo”.</p>
+
+            <p>El primer modelo, el <em>Rolls-Royce 10 HP</em>, sorprendió por su suavidad y fiabilidad. En
+                <strong>1907</strong> lanzaron el <em>Silver Ghost</em>, considerado el mejor automóvil del planeta.
+                Durante el siglo XX se consolidó como símbolo de lujo y elegancia, y en 1931 adquirió a
+                <strong>Bentley</strong>.
+            </p>
+
+            <p>Hoy, bajo el grupo <strong>BMW</strong>, Rolls-Royce sigue siendo referente de sofisticación con modelos
+                como el <em>Phantom</em>, <em>Ghost</em> y <em>Spectre</em>.</p>
+
+            <div id="carruselRolls" class="carousel slide my-4" data-bs-ride="carousel">
+                <div class="carousel-inner rounded shadow-sm">
+                    <div class="carousel-item active"><img src="imagenes/roll antiguo.jpg" class="d-block w-100 rounded"
+                            alt="Rolls antiguo"></div>
+                    <div class="carousel-item"><img src="imagenes/roll silver.jpg" class="d-block w-100 rounded"
+                            alt="Silver Ghost"></div>
+                    <div class="carousel-item"><img src="imagenes/roll moderno.jpg" class="d-block w-100 rounded"
+                            alt="Rolls moderno"></div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carruselRolls"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carruselRolls"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== Sección Ferrari ====== -->
+    <section id="ferrari" class="text-center p-5 my-5 rounded shadow">
+        <h2 class="fw-bold mb-4 text-danger">🏎️ Historia de Ferrari</h2>
+        <div class="container">
+            <p><strong>Ferrari</strong> nació en <strong>1947</strong> en <strong>Maranello, Italia</strong>, fundada
+                por <strong>Enzo Ferrari</strong>. Desde sus inicios, la marca se dedicó a la excelencia en las pistas
+                de carreras, convirtiéndose en uno de los nombres más legendarios del automovilismo.</p>
+
+            <p>Su primer automóvil, el <strong>125 S</strong>, incorporaba un motor V12 diseñado por Gioachino Colombo.
+                Ferrari pronto destacó en competencias, ganando su primera carrera en 1947 y cosechando éxitos en
+                Fórmula 1 desde 1950.</p>
+
+            <p>Modelos como el <strong>250 GTO</strong>, el <strong>Testarossa</strong> y el <strong>LaFerrari</strong>
+                marcaron la evolución de la marca, que combina potencia, estilo y pasión italiana.</p>
+
+            <p>Hoy, Ferrari continúa innovando con modelos híbridos y eléctricos, manteniendo su esencia de velocidad y
+                elegancia.</p>
+
+            <div id="carruselFerrari" class="carousel slide my-4" data-bs-ride="carousel">
+                <div class="carousel-inner rounded shadow-sm">
+                    <div class="carousel-item active"><img src="imagenes/ferrari clasico.jpg"
+                            class="d-block w-100 rounded" alt="Ferrari 1"></div>
+                    <div class="carousel-item"><img src="imagenes/ferrari deportivo.webp" class="d-block w-100 rounded"
+                            alt="Ferrari 2"></div>
+                    <div class="carousel-item"><img src="imagenes/ferrari moderno.webp" class="d-block w-100 rounded"
+                            alt="Ferrari 3"></div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carruselFerrari"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carruselFerrari"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+
+        const imagenes = [
+            'https://images.unsplash.com/photo-1503376780353-7e6692767b70',
+            'https://images.unsplash.com/photo-1503736334956-4c8f8e92946d',
+            'https://images.unsplash.com/photo-1511919884226-fd3cad34687c',
+            'https://images.unsplash.com/photo-1502877338535-766e1452684a'
+        ];
+
+        let indice = 0;
+        setInterval(() => {
+            indice = (indice + 1) % imagenes.length;
+            document.body.style.backgroundImage = `url(${imagenes[indice]})`;
+        }, 8000); // cambia cada 8 segundos
+    </script>
+
+</body>
+
+</html>
