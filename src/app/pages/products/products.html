@@ -5,7 +5,7 @@
         <!-- Coche 1 -->
         <div class="col-md-4">
             <div class="card h-100 shadow-sm">
-                <img src="imagenes/ferrari deportivo.webp" class="card-img-top" alt="Ferrari Deportivo">
+                <img src="imagenes/ferrarideportivo.webp" class="card-img-top" alt="Ferrari Deportivo">
                 <div class="card-body">
                     <h5 class="card-title">Ferrari F8 Tributo</h5>
                     <p class="card-text">Un superdeportivo que combina elegancia, potencia y tecnología con un motor V8
@@ -18,7 +18,7 @@
         <!-- Coche 2 -->
         <div class="col-md-4">
             <div class="card h-100 shadow-sm">
-                <img src="imagenes/roll moderno.jpg" class="card-img-top" alt="Rolls Royce Ghost">
+                <img src="imagenes/rollmoderno.jpg" class="card-img-top" alt="Rolls Royce Ghost">
                 <div class="card-body">
                     <h5 class="card-title">Rolls-Royce Ghost</h5>
                     <p class="card-text">Lujo, silencio y potencia en un sedán británico hecho a mano con los más altos
@@ -46,7 +46,7 @@
         <!-- Coche 4 -->
         <div class="col-md-4">
             <div class="card h-100 shadow-sm">
-                <img src="imagenes/ferrari clasico.jpg" class="card-img-top" alt="Ferrari Clásico">
+                <img src="imagenes/ferrariclasico.jpg" class="card-img-top" alt="Ferrari Clásico">
                 <div class="card-body">
                     <h5 class="card-title">Ferrari 250 GTO</h5>
                     <p class="card-text">Una joya clásica del automovilismo, símbolo de elegancia y valor histórico
@@ -59,7 +59,7 @@
         <!-- Coche 5 -->
         <div class="col-md-4">
             <div class="card h-100 shadow-sm">
-                <img src="imagenes/roll silver.jpg" class="card-img-top" alt="Rolls-Royce Silver">
+                <img src="imagenes/rollsilver.jpg" class="card-img-top" alt="Rolls-Royce Silver">
                 <div class="card-body">
                     <h5 class="card-title">Rolls-Royce Silver Ghost</h5>
                     <p class="card-text">El legendario modelo que marcó el inicio del lujo sobre ruedas a principios del
@@ -128,3 +128,14 @@
         font-weight: 600;
     }
 </style>
+
+<section class="productos">
+    @for (producto of productos; track producto.id) {
+    <article class="producto">
+        <img [src]="producto.imagen" [alt]="producto.nombre">
+        <h3>{{ producto.nombre }}</h3>
+        <p>{{ producto.descripcion }}</p>
+        <strong>{{ producto.precio | currency: 'COP': 'symbol': '1.0-0' }}</strong>
+    </article>
+    }
+</section>

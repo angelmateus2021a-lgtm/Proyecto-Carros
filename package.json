@@ -7,7 +7,7 @@
     "build": "ng build",
     "test": "ng test",
     "e2e": "ng e2e",
-    "deploy": "ng build --base-href \"https://github.com/angelmateus2021a-lgtm/Proyecto-Carros.git\" && npx angular-cli-ghpages --dir=dist/Proyecto-Carros"
+    "deploy": "ng build --base-href \"https://angelmateus2021a-lgtm.github.io/Proyecto-Carros/\" && npx angular-cli-ghpages --dir=dist/carros"
   },
   "prettier": {
     "printWidth": 100,

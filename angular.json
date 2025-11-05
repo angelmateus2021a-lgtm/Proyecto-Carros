@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": " dist/Proyecto-Carros",
+            "outputPath": "dist/carros",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -96,5 +96,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "76ce36d1-1ef4-4c3f-a548-af3791d3f3c4"
   }
 }
