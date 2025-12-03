@@ -1,70 +1,69 @@
-<!DOCTYPE html>
-<html lang="es">
+<div class="container mt-5 mb-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+      <div class="contacto-card">
+        <h3 class="text-center mb-4">Contáctanos</h3>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Contacto - Carros</title>
-   
+        <form [formGroup]="contactForm" (ngSubmit)="enviar()" novalidate>
 
-    <style>
-        body {
-            background-color: #f5f5f5;
-        }
-
-        .contacto-card {
-            background: #fff;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-        }
-
-        .btn-enviar {
-            background-color: #000000;
-            border: none;
-        }
-
-        .btn-enviar:hover {
-            background-color: #b02a37;
-        }
-    </style>
-</head>
-
-<body>
-
-    <div class="container mt-5 mb-5">
-        <div class="row justify-content-center">
-            <div class="col-md-8 col-lg-6">
-                <div class="contacto-card">
-                    <h3 class="text-center mb-4">Contáctanos </h3>
-                    <form>
-                        <div class="mb-3">
-                            <label for="nombre" class="form-label">Nombre completo</label>
-                            <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre">
-                        </div>
-                        <div class="mb-3">
-                            <label for="correo" class="form-label">Correo electrónico</label>
-                            <input type="email" class="form-control" id="correo" placeholder="ejemplo@correo.com">
-                        </div>
-                        <div class="mb-3">
-                            <label for="telefono" class="form-label">Teléfono</label>
-                            <input type="tel" class="form-control" id="telefono" placeholder="Tu número de contacto">
-                        </div>
-                        <div class="mb-3">
-                            <label for="mensaje" class="form-label">Mensaje</label>
-                            <textarea class="form-control" id="mensaje" rows="4"
-                                placeholder="Escribe tu mensaje aquí..."></textarea>
-                        </div>
-                        <div class="d-grid">
-                            <button type="submit" class="btn btn-enviar text-white">Enviar mensaje</button>
-                        </div>
-                    </form>
-                </div>
+          <!-- NOMBRE -->
+          <div class="mb-3">
+            <label class="form-label">Nombre completo</label>
+            <input type="text" class="form-control" formControlName="nombre" placeholder="Ingresa tu nombre"
+              [class.is-invalid]="f['nombre'].invalid && f['nombre'].touched" />
+            <div class="invalid-feedback" *ngIf="f['nombre'].invalid && f['nombre'].touched">
+              <small *ngIf="f['nombre'].errors?.['required']">El nombre es obligatorio</small>
+              <small *ngIf="f['nombre'].errors?.['minlength']">Mínimo 3 caracteres</small>
             </div>
-        </div>
+          </div>
+
+          <!-- EMAIL -->
+          <div class="mb-3">
+            <label class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" formControlName="email" placeholder="ejemplo@correo.com"
+              [class.is-invalid]="f['email'].invalid && f['email'].touched" />
+            <div class="invalid-feedback" *ngIf="f['email'].invalid && f['email'].touched">
+              <small *ngIf="f['email'].errors?.['required']">El email es obligatorio</small>
+              <small *ngIf="f['email'].errors?.['email']">Email inválido</small>
+            </div>
+          </div>
+
+          <!-- TELÉFONO -->
+          <div class="mb-3">
+            <label class="form-label">Teléfono</label>
+            <input type="tel" class="form-control" formControlName="telefono" placeholder="Tu número de contacto"
+              [class.is-invalid]="f['telefono'].invalid && f['telefono'].touched" />
+            <div class="invalid-feedback" *ngIf="f['telefono'].invalid && f['telefono'].touched">
+              <small *ngIf="f['telefono'].errors?.['required']">El teléfono es obligatorio</small>
+              <small *ngIf="f['telefono'].errors?.['pattern']">Debe tener entre 7 y 15 dígitos</small>
+            </div>
+          </div>
+
+          <!-- MENSAJE -->
+          <div class="mb-3">
+            <label class="form-label">Mensaje</label>
+            <textarea rows="4" class="form-control" formControlName="mensaje" placeholder="Escribe tu mensaje aquí..."
+              [class.is-invalid]="f['mensaje'].invalid && f['mensaje'].touched"></textarea>
+            <div class="invalid-feedback" *ngIf="f['mensaje'].invalid && f['mensaje'].touched">
+              <small *ngIf="f['mensaje'].errors?.['required']">El mensaje es obligatorio</small>
+              <small *ngIf="f['mensaje'].errors?.['minlength']">Mínimo 5 caracteres</small>
+            </div>
+          </div>
+
+          <!-- BOTONES -->
+          <div class="d-grid gap-2">
+            <button type="submit" class="btn btn-primary" [disabled]="submitting">
+              Enviar
+            </button>
+
+            <button type="button" class="btn btn-secondary" (click)="cancelar()" [disabled]="submitting">
+              Cancelar
+            </button>
+          </div>
+
+        </form>
+
+      </div>
     </div>
-
-
-</body>
-
-</html>
+  </div>
+</div>
