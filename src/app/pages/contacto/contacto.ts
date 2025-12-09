@@ -38,29 +38,18 @@ export class contacto {
       email: this.f['email'].value.trim(),
       telefono: this.f['telefono'].value.trim(),
       mensaje: this.f['mensaje'].value.trim(),
+      fecha: new Date().toLocaleString('es-ES')
     };
 
-    // Crear contenido del archivo
-    const contenido = `
-===========================================
-       DATOS DE CONTACTO
-===========================================
+    // Convertir a JSON con formato legible
+    const contenidoJSON = JSON.stringify(data, null, 2);
 
-Nombre: ${data.nombre}
-Email: ${data.email}
-Teléfono: ${data.telefono}
-Mensaje: ${data.mensaje}
-
-Fecha: ${new Date().toLocaleString('es-ES')}
-===========================================
-    `;
-
-    // Crear y descargar el archivo
-    const blob = new Blob([contenido], { type: 'text/plain' });
+    // Crear y descargar el archivo JSON
+    const blob = new Blob([contenidoJSON], { type: 'application/json' });
     const url = window.URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
-    link.download = `contacto_${data.nombre}_${Date.now()}.txt`;
+    link.download = `contacto_${data.nombre}_${Date.now()}.json`;
     link.click();
     window.URL.revokeObjectURL(url);
 

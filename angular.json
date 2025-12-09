@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/carros",
+            "outputPath": "dist/carros/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -46,7 +46,7 @@
                 }
               ],
               "outputHashing": "all",
-              "baseHref": " https://angelmateus2021a-lgtm.github.io/Proyecto-Carros/"
+              "baseHref": "/Proyecto-Carros/"
             },
             "development": {
               "optimization": false,
@@ -92,7 +92,10 @@
           }
         },
         "deploy": {
-          "builder": "angular-cli-ghpages:deploy"
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "dir": "dist/carros/browser"
+          }
         }
       }
     }
